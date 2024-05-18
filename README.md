@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YouTube Video Approval App
 
-## Getting Started
+This app allows video editors to upload videos directly to YouTube, but not before you approve them. The app ensures that only approved videos are published to your YouTube channel.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Authentication and Access Token Retrieval**
+  - Implemented OAuth2 authentication flow.
+  - Securely retrieve and store access tokens.
+  - Handle token refresh automatically.
+  - Set up necessary scopes for YouTube API access.
+  - Test authentication process to ensure successful login and token acquisition.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Video Upload and Approval Process** (In Progress)
+  - Editors can upload videos to the app.
+  - The app sends notifications for video approval.
+  - Admins can review and approve videos before they are uploaded to YouTube.
+  - Only approved videos are published to the YouTube channel.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Current Status
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Completed:**
+- Authentication and access token retrieval for YouTube integration.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**In Progress:**
+- Implementing the video upload and approval process.

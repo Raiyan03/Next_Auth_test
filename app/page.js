@@ -13,10 +13,10 @@ export default function Home() {
   // const user = session?.user;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Hello World</h1>
+      <h1 className="text-4xl font-bold">You Dit</h1>
       {user ? (
         <>
-          <p className="text-lg">Welcome to your new app {user.name }</p>
+          <p className="text-lg">Welcome {user.name }</p>
           {/* <List users={users}/> */}
           <SignOutButton/>
         </>
