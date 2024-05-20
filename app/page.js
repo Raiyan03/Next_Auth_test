@@ -3,26 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import getSession from './lib/getSession';
 import { signIn, signOut, useSession } from "next-auth/react";
+import { getChannel } from "./lib/upload";
 
 export default function Home() {
-  // const users = await prisma.user.findMany();
+  // const user = await prisma.user.findMany();
   const session = useSession();
   const user = session.data?.user;
   // const session = await getSession();
   const account = session?.account;
   // const user = session?.user;
+  // console.log(account)
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className="text-4xl font-bold">You Dit</h1>
       {user ? (
         <>
           <p className="text-lg">Welcome {user.name }</p>
-          {/* <List users={users}/> */}
           <SignOutButton/>
         </>
       ): (
         <SignInButton />
       )}
+      <button onClick={() => {
+        getChannel(session);
+      }} className="p-3 bg-black text-white rounded">Test</button>
     </main>
   );
 }
